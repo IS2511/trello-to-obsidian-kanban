@@ -11,7 +11,7 @@ pub(crate) struct Args {
     /// 
     /// More info: https://support.atlassian.com/trello/docs/making-sense-of-trellos-json-export/
     #[arg(short, long, default_value = "-")]
-    input: InputPath,
+    pub input: InputPath,
 
     /// Path to output file, '-' for stdout
     /// 
@@ -19,19 +19,19 @@ pub(crate) struct Args {
     /// 
     /// More info: https://github.com/mgmeyers/obsidian-kanban/
     #[arg(short, long, default_value = "-")]
-    output: OutputPath,
+    pub output: OutputPath,
 
     /// Download attachments, IDs as filenames
     #[arg(long, default_value_t = false)]
-    download_attachments: bool,
+    pub download_attachments: bool,
 
     /// Path to directory for attachments
     #[arg(long, default_value = "attachments")]
-    attachments_path: ClioPath,
+    pub attachments_path: ClioPath,
 
     /// Trello API key (for attachments)
     #[arg(short = 'k', long)]
-    api_key: Option<String>,
+    pub api_key: Option<String>,
 }
 
 
