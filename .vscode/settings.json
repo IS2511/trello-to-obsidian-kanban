@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
+        "fogbugz",
         "kanban",
+        "prefs",
         "serde"
     ],
     "cmake.configureOnOpen": false
