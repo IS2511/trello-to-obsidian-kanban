@@ -10,7 +10,7 @@ pub(crate) struct Args {
     /// Format: Trello JSON
     /// 
     /// More info: https://support.atlassian.com/trello/docs/making-sense-of-trellos-json-export/
-    #[arg(short, long, default_value_t = InputPath::std())]
+    #[arg(short, long, default_value = "-")]
     input: InputPath,
 
     /// Path to output file, '-' for stdout
@@ -18,7 +18,7 @@ pub(crate) struct Args {
     /// Format: Markdown - Obsidian Kanban
     /// 
     /// More info: https://github.com/mgmeyers/obsidian-kanban/
-    #[arg(short, long, default_value_t = OutputPath::std())]
+    #[arg(short, long, default_value = "-")]
     output: OutputPath,
 
     /// Download attachments, IDs as filenames
